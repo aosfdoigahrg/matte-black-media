@@ -14,7 +14,53 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
   <meta name="author" content="matte black media">
-  <link rel="icon" href="https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/favicon-32x32.png" type="image/x-icon">
+  <link rel="icon" href="https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/favicon.ico"
+    type="image/x-icon">
+
+  <!-- loading -->
+
+
+  <!-- loader style -->
+  <style>
+    #loader {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      border: 12px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 12px solid #444444;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- loader -->
+<script>
+  document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+          document.querySelector(
+              "body").style.visibility = "hidden";
+          document.querySelector(
+              "#loader").style.visibility = "visible";
+      } else {
+          document.querySelector(
+              "#loader").style.display = "none";
+          document.querySelector(
+              "body").style.visibility = "visible";
+      }
+  };
+</script>
   <!-- style3.css -->
   <style>
     .section3container {
@@ -104,9 +150,6 @@
   </style>
   <!-- style.css -->
   <style>
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
-
     * {
       margin: 0;
       padding: 0;
@@ -435,7 +478,6 @@
     }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
 
 
   <style>
@@ -470,6 +512,7 @@
       transform: translate(-50%, 0%);
       opacity: 0;
     }
+
     .main-elem h1 {
       font-size: 4vw;
     }
@@ -493,23 +536,28 @@
       font-size: 2rem;
       transform: translateY(0.75rem);
     }
+
     .main-elem a {
       font-size: 22px;
       font-weight: 700;
       color: #f5f5f7;
       cursor: pointer;
     }
+
     .main-elem a:hover {
       text-decoration: underline;
     }
+
     /* Message Element Text Styling */
     .msg-elem h2 {
       font-size: 96px;
     }
+
     .msg-elem small {
       font-size: 18px;
       font-weight: 600;
     }
+
     .msg-elem p {
       font-size: 3.5vw;
       font-weight: 700;
@@ -528,6 +576,7 @@
     .section-01 .canvas-elem canvas {
       width: 60vw;
     }
+
     .static-section {
       padding: 50px 0;
       position: relative;
@@ -638,7 +687,8 @@
     }
 
     .red {
-      color: rgb(245, 77, 77) !important;
+      color: rgb(253, 42, 42) !important;
+      text-shadow: 0 0 30px rgba(255, 42, 42, 0.6);
     }
   </style>
 
@@ -737,7 +787,7 @@
   <style>
     section {
       width: 100%;
-      min-height: 100vh;
+      min-height: 84vh;
       background: #000;
       color: #f5f5f7;
     }
@@ -1033,12 +1083,14 @@
 </head>
 
 <body>
+  <div id="loader"></div>
   <nav class="navbar">
     <div class="nav-content">
 
       <div class="nav-logo">
         <a href="#top">
-          <img class="" id="logo_navbar" src="https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/logo.png" alt="logo">
+          <img class="" id="logo_navbar"
+            src="https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/logo.png" alt="logo">
         </a>
         <a href="#top" class="logo-text">Matte Black Media</a>
       </div>
@@ -1055,7 +1107,7 @@
     <div class="main-elem">
       <h1>Double your <span class="colored">PMU</span> clients in <span class="underline">90 days.</span></h1>
       <h2 class="ms-header__title">
-        <span class="colored">Without any risks, </span>you'll double your 
+        <span class="colored">Without any risks, </span>you'll double your
         <div class="ms-slider">
           <ul class="ms-slider__words">
             <li class="ms-slider__word"><span class="colored">clients</span></li>
@@ -1102,7 +1154,8 @@
     </div>
     <div class="msg-elem msg-elem-04">
       <p>
-        You won't have to do anything extra. - We'll take care <br> of the whole client acquisition process.
+        You won't have to do <span class="colored">anything</span> extra - we'll take care <br> of the <span
+          class="underline">whole</span> client acquisition process.
       </p>
     </div>
     <div class="msg-elem msg-elem-05 canvas-elem">
@@ -1119,7 +1172,7 @@
         integrated into your <span class="underline" style="font-weight: bold;">calendar.</span> <br> <br>
         Rest assured, with us, concerns about having enough clients will be a thing of the past.
       </div>
-      <a onclick="smoothScrollToElement('fourthSection')" class="contact_button">
+      <a onclick="smoothScrollToElement('fourthSection')" class="contact_button" href="fourthSection">
         <div>Contact Us</div>
       </a>
     </div>
@@ -1150,12 +1203,14 @@
       </div>
       <div class="features">
         <div class="title"><span>&#128197 </span> Appointment is booked straight into your calendar</div>
-        <p>After educating the client with information about your services, we coordinate and schedule an appointment that is sent directly into your
-          calendar. To ensure commitment, a small deposit from the client is collected, guaranteeing the client's attendance for the
+        <p>After educating the client with information about your services, we coordinate and schedule an appointment
+          that is sent directly into your
+          calendar. To ensure commitment, a small deposit from the client is collected, guaranteeing the client's
+          attendance for the
           scheduled treatment.</p>
       </div>
     </div>
-    <a onclick="smoothScrollToElement('fourthSection')" class="contact_button end_contact_button">
+    <a onclick="smoothScrollToElement('fourthSection')" class="contact_button end_contact_button" href="fourthSection">
       <div>Contact Us</div>
 
     </a>
@@ -1163,191 +1218,168 @@
 
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section class="section section3" id="thirdSection">
     <h1 class="h1-section3">FAQ</h1>
     <div class="section3container section">
       <div class="faq-container">
         <div class="faq-item">
-          <div class="faq-question">How do you differentiate yourself from other?</div>
+          <div class="faq-question">How are you differnet from others?</div>
           <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
         </div>
         <div class="faq-answer">
-          <p>Unlike many other agencies, we are solely results-oriented. In contrast to them, we don't JUST run facebook
-            ads for you, we don't take your money if we got insufficient results to make them worth the money. You
-            might've worked with other agencies in the past that didn't live up to their expectations, but we always try
-            to be best for you, therefore any feedback from you would be more than welcomed.</p>
+          <p>We're all about the long run! Our goal is to ensure you enjoy a fantastic experience that keeps you by our
+            side. We're dedicated to delivering standout results that impress, making you want to stay. And if your
+            situation ever shifts, no worries—feel free to part ways at the end of any month! </p>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Does it take long to get onboarded?</div>
+          <div class="faq-question">What happens after I've contacted you</div>
           <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
         </div>
         <div class="faq-answer">
-          <p>No, it will take you at most 45 minutes. 7 days after that, we'll have everything running.</p>
+          <p>
+            We'll reach out as soon as we can and set up a brief 20-minute Zoom call. During our chat, we'll share how
+            we work and figure out a plan that suits your salon together. Looking forward to it!</p>
         </div>
         <div class="faq-item">
-          <div class="faq-question">What should I do after I've onboarded?</div>
+          <div class="faq-question">What is your offer?</div>
           <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
         </div>
         <div class="faq-answer">
-          <p>We will take care of getting high-quality customers at your doorsteps. The only thing you'll have to do is
-            treat them!</p>
+          <p>Our approach is flexible – no fixed offers here. Instead, we tailor solutions to your needs. Unlike most
+            agencies, we don't rely on standard packages; we aim to provide a personalized approach that stands out.
+            Let's discuss your requirements and ensure you get a solution that truly fits.</p>
         </div>
         <div class="faq-item">
-          <div class="faq-question">How does the payment plan look like?</div>
+          <div class="faq-question">What do you mean risk-free?</div>
           <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
         </div>
-        <div class="faq-answer">
-          <p>Our payment plan is strictly pay per result oriented - meaning if we somehow don't get you any clients, you
-            don't pay us anything. We charge for every high-ticket client at the end of the month. We also have a
-            retainer that will be refunded at the end of the month, just to see the commitment. It is structured so you
-            don't take any risks and only pay after you've gotten the results.</p>
+        <div class="faq-answer last-faq-item">
+          <p>
+            You're in the clear with us – zero risks involved. You only pay after we bring in the clients, and it's all
+            based on results. If, by some chance, we don't get you any clients, you don't owe us a penny. It's a
+            win-win.</p>
         </div>
-        <div class="faq-item last-faq-item">
-          <div class="faq-question">Why does it have to be so complicated?</div>
-          <div class="icon-container"><i class="fas fa-chevron-right"></i></div>
-        </div>
-        <div class="faq-answer">
-          <p>It can be overwhelming with such a complicated process. Don't worry, if any questions or issues arise, you
-            can always contact us or if needed we'll schedule a meeting. We want to make sure that you fully understand
-            everything so that we can be long-term partners!</p>
-        </div>
+
       </div>
     </div>
   </section>
-
-
-
-
-
-
   <section class="static-section section section4" id="fourthSection"
     style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
     <h1><span class="underline">Double</span> your clients in 90 days.</h1>
     <h2>If we don't get you any clients, you don't pay us a single penny.</h2>
-    <form name="submit-to-google-sheet">
-      <div><span>Full Name: </span><input name="name" type="text" placeholder="" required></div>
-      <div><span>Website: </span><input name="website" type="text" placeholder="" required></div>
-      <div><span>Email: </span><input name="email" type="email" placeholder="" required></div>
-      <div><span>Phone: </span><input name="phone" type="tel" placeholder="" required></div>
-      <button type="submit">Double my clients!</button>
-    </form>
+    <h4 style="line-height: 1rem;"><br> Fill the contact form below and we'll schedule a quick zoom meeting as fast as
+      we can!</h3>
+      <h5 style="line-height: 1rem;"><br> If there are any details that you want to omit, then just write -</h5>
+      <form name="submit-to-google-sheet">
+        <div><span>Full Name: </span><input name="name" type="text" placeholder="" required></div>
+        <div><span>Website: </span><input name="website" type="text" placeholder="" required></div>
+        <div><span>Email: </span><input name="email" type="email" placeholder="" required></div>
+        <div><span>Phone: </span><input name="phone" type="tel" placeholder="" required></div>
+        <button type="submit">Double my clients!</button>
+      </form>
 
-    <script>
-      const scriptURL =
-        'https://script.google.com/macros/s/AKfycbyJ5dLr-V8Zb0ROydueD5F5NdgLthHsdg7JPN-LxaMhdEe_96o33txnTgH54cMVtxhl/exec';
-      const form = document.forms['submit-to-google-sheet'];
+      <script>
+        const scriptURL =
+          'https://script.google.com/macros/s/AKfycbyJ5dLr-V8Zb0ROydueD5F5NdgLthHsdg7JPN-LxaMhdEe_96o33txnTgH54cMVtxhl/exec';
+        const form = document.forms['submit-to-google-sheet'];
 
-      form.addEventListener('submit', e => {
-        e.preventDefault();
+        form.addEventListener('submit', e => {
+          e.preventDefault();
 
-        fetch(scriptURL, {
-            method: 'POST',
-            body: new FormData(form)
-          })
-          .then(response => {
-            console.log('Success!', response);
-
-
-            showThankYouLightbox();
-          })
-          .catch(error => console.error('Error!', error.message));
-      });
-
-      function showThankYouLightbox() {
-
-        const overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-        overlay.style.display = 'flex';
-        overlay.style.flexDirection = 'column';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.zIndex = '20'
+          fetch(scriptURL, {
+              method: 'POST',
+              body: new FormData(form)
+            })
+            .then(response => {
+              console.log('Success!', response);
 
 
-        const message = document.createElement('div');
-        message.textContent = '❤️ Thank you!';
-        message.style.color = '#fff';
-        message.style.fontFamily =
-          'system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif'
-        message.style.fontSize = '4rem';
-        message.style.fontWeight = '800'
-        message.style.textAlign = 'center';
-        message.style.marginBottom = '10px';
-
-
-        const additionalMessage1 = document.createElement('div');
-        additionalMessage1.textContent = "Your form has been processed. We'll contact you as soon as possible :)";
-        additionalMessage1.style.color = '#fff';
-        additionalMessage1.style.fontSize = '18px';
-        additionalMessage1.style.textAlign = 'center';
-        additionalMessage1.style.marginBottom = '10px';
-
-        const additionalMessage2 = document.createElement('div');
-        additionalMessage2.textContent = 'You can always email us at '
-        additionalMessage2.style.color = '#fff';
-        additionalMessage2.style.fontSize = '18px';
-        additionalMessage2.style.cursor = 'pointer';
-        const emailLink = document.createElement('a');
-        emailLink.textContent = 'contact@matte-black-media.com';
-        emailLink.style.color = '#fff';
-        emailLink.style.fontSize = '18px';
-        emailLink.style.textDecoration = 'underline';
-        emailLink.style.cursor = 'pointer';
-        emailLink.addEventListener('click', () => {
-          window.location.href = 'mailto:contact@matte-black-media.com';
-        });
-        additionalMessage2.appendChild(emailLink);
-
-
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'X';
-        closeButton.style.backgroundColor = '#00000000';
-        closeButton.style.margin = '50px'
-        closeButton.style.color = '#fff';
-        closeButton.style.border = 'none';
-        closeButton.style.padding = '5px 10px';
-        closeButton.style.fontSize = '50px';
-        closeButton.style.cursor = 'pointer';
-        closeButton.addEventListener('click', () => {
-          document.body.removeChild(overlay);
+              showThankYouLightbox();
+            })
+            .catch(error => console.error('Error!', error.message));
         });
 
-        overlay.appendChild(message);
-        overlay.appendChild(additionalMessage1);
-        overlay.appendChild(additionalMessage2);
-        overlay.appendChild(closeButton);
+        function showThankYouLightbox() {
+
+          const overlay = document.createElement('div');
+          overlay.style.position = 'fixed';
+          overlay.style.top = '0';
+          overlay.style.left = '0';
+          overlay.style.width = '100%';
+          overlay.style.height = '100%';
+          overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+          overlay.style.display = 'flex';
+          overlay.style.flexDirection = 'column';
+          overlay.style.alignItems = 'center';
+          overlay.style.justifyContent = 'center';
+          overlay.style.zIndex = '20'
 
 
-        document.body.appendChild(overlay);
-      }
-    </script>
+          const message = document.createElement('div');
+          message.textContent = '❤️ Thank you!';
+          message.style.color = '#fff';
+          message.style.fontFamily =
+            'system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif'
+          message.style.fontSize = '4rem';
+          message.style.fontWeight = '800'
+          message.style.textAlign = 'center';
+          message.style.marginBottom = '10px';
+
+
+          const additionalMessage1 = document.createElement('div');
+          additionalMessage1.textContent = "Your form has been processed. We'll contact you as soon as possible :)";
+          additionalMessage1.style.color = '#fff';
+          additionalMessage1.style.fontSize = '18px';
+          additionalMessage1.style.textAlign = 'center';
+          additionalMessage1.style.marginBottom = '10px';
+
+          const additionalMessage2 = document.createElement('div');
+          additionalMessage2.textContent = 'You can always email us at '
+          additionalMessage2.style.color = '#fff';
+          additionalMessage2.style.fontSize = '18px';
+          additionalMessage2.style.cursor = 'pointer';
+          const emailLink = document.createElement('a');
+          emailLink.textContent = 'contact@matte-black-media.com';
+          emailLink.style.color = '#fff';
+          emailLink.style.fontSize = '18px';
+          emailLink.style.textDecoration = 'underline';
+          emailLink.style.cursor = 'pointer';
+          emailLink.addEventListener('click', () => {
+            window.location.href = 'mailto:contact@matte-black-media.com';
+          });
+          additionalMessage2.appendChild(emailLink);
+
+
+          const closeButton = document.createElement('button');
+          closeButton.textContent = 'X';
+          closeButton.style.backgroundColor = '#00000000';
+          closeButton.style.margin = '50px'
+          closeButton.style.color = '#fff';
+          closeButton.style.border = 'none';
+          closeButton.style.padding = '5px 10px';
+          closeButton.style.fontSize = '50px';
+          closeButton.style.cursor = 'pointer';
+          closeButton.addEventListener('click', () => {
+            document.body.removeChild(overlay);
+          });
+
+          overlay.appendChild(message);
+          overlay.appendChild(additionalMessage1);
+          overlay.appendChild(additionalMessage2);
+          overlay.appendChild(closeButton);
+
+
+          document.body.appendChild(overlay);
+        }
+      </script>
   </section>
-  <section style="height: 20vh; wdith: 100%; color: white; font-size: 2rem; display: flex; flex-direction: row; justify-content: center; align-items: center;">
-    <h1>Email: <span class="underline">contact@matte-black-media.com<span></h1>
+  <section
+    style="min-height: 0; height: 20vh !important; width: 100%; color: white; font-size: 2rem; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+    <h1 style="font-size: 2rem;">Email: <span class="colored">contact@matte-black-media.com<span></h1>
   </section>
 </body>
+
+
 <!-- scripts -->
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -1472,19 +1504,20 @@
   const context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;
-
+  const frameCount = 70;
+  const frameOffset = 13
   const images = [];
-  const airpods = {
+  const frame_image_scroll = {
     frame: 0,
   };
-  const frameCount = 70;
+
 
 
   const currentFrame = index => (
-    `https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/animations/frame${index.toString().padStart(4, '0')}.png`
+    `https://raw.githubusercontent.com/aosfdoigahrg/sadasasfadgsgafdgareg/main/animations/frame${index.toString().padStart(4, '0')}.jpg`
   );
 
-  for (let i = 13; i < frameCount; i++) {
+  for (let i = frameOffset; i < frameCount; i++) {
     const img = new Image();
     img.src = currentFrame(i);
     images.push(img);
@@ -1504,8 +1537,8 @@
       mainText, {
         opacity: 0
       }, {
-        duration: 3,
-        delay: 0.75,
+        duration: 1,
+        delay: 0,
         opacity: 1
       },
       "start0"
@@ -1517,15 +1550,15 @@
 
 
     .to(mainText, {
-      duration: 3.5,
+      duration: 0.1,
       y: -500
     }, "start0")
 
 
     .add("start0")
     .to(
-      airpods, {
-        duration: 18,
+      frame_image_scroll, {
+        duration: 2.4,
         frame: 70,
         snap: "frame",
         ease: "none",
@@ -1536,75 +1569,75 @@
 
     .add("start1")
     .to(msgText1, {
-      duration: 3.5,
+      duration: 1,
       opacity: 1,
       y: -50
     }, "start1")
     .to(msgText1, {
-      duration: 3.5,
+      duration: 1,
       opacity: 0,
       y: -100
     })
 
     .add("start2")
     .to(msgText2, {
-      duration: 3.5,
+      duration: 1,
       opacity: 1,
       y: -50
     }, "start2")
     .to(msgText2, {
-      duration: 3.5,
+      duration: 1,
       opacity: 0,
       y: -100
     })
 
     .add("start3")
     .to(msgText3, {
-      duration: 3.5,
+      duration: 1,
       opacity: 1,
       y: -50
     }, "start3")
     .to(msgText3, {
-      duration: 3.5,
+      duration: 1,
       opacity: 0,
       y: -100
     })
 
     .add("start4")
     .to(msgText4, {
-      duration: 3.5,
+      duration: 1,
       opacity: 1,
       y: -50
     }, "start4")
     .to(msgText4, {
-      duration: 3.5,
+      duration: 1,
       opacity: 0,
       y: -100
     })
 
     .add("endscreen")
     .to(msgText5, {
-      duration: 3.5,
+      duration: 1,
       opacity: 0,
       y: 100
     }, "endscreen")
     .to(msgText5, {
-      duration: 3.5,
+      duration: 1,
       opacity: 1,
       y: 0
     })
 
 
     .to(canvas, {
-      duration: 36,
-      scale: 1.5,
+      duration: 12,
+      scale: 1.2,
       ease: Power1.easeIn
     }, "start0");
 
 
   let scene1 = new ScrollMagic.Scene({
       triggerElement: ".section-01",
-      duration: "4000",
+      duration: "2400",
       triggerHook: 0,
     })
     .setTween(tl1)
@@ -1617,11 +1650,8 @@
 
   function render() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[airpods.frame], 0, 0);
+    context.drawImage(images[frame_image_scroll.frame], 0, 0);
   }
-
-
-
 </script>
 <script>
   const faqItems = document.querySelectorAll('.faq-item');
@@ -1653,5 +1683,6 @@
     });
   });
 </script>
+
 
 </html>
