@@ -1932,9 +1932,8 @@
         </div>
         <div class="faq-answer last-faq-item">
           <p>
-            You're in the clear with us – zero risks involved. You only pay after we bring in the clients, and it's all
-            based on results. If, by some chance, we don't get you any clients, you don't owe us a penny. It's a
-            win-win.</p>
+            We want to have happy long-term partners. You only pay for results, nothing else. If, by some chance, we don't get you any clients, you don't owe us a single penny. If you're not happy with us, you can always just quit.
+          </p>
         </div>
 
       </div>
@@ -1946,9 +1945,9 @@
     <h1>Get <span class="underline" style="text-decoration: underline solid var(--blueviolet);">10 PreBooked
         Appointments</span> in the next 30 days, or you don't pay</h1>
     <h2>Straight into your calendar. You don't have to take any risks! It's a win-win for both of us.</h2>
-    <h4 style="line-height: 1rem;"><br> Fill the contact form below and we'll schedule a quick zoom meeting as fast as
+    <h4 style="line-height: 1rem;"><br> Fill the contact form below and we'll schedule a quick 15-minute zoom meeting as fast as
       we can!</h4>
-    <h4><br> If there are any details that you want to omit, then just fill it with "-"</h5>
+    <h4><br>If you don't see us working together, you can just take the ideas and implement them yourself!</h5>
       <form name="submit-to-google-sheet">
         <div><span>Name: </span><input name="name" type="text" placeholder="" required></div>
         <div><span>Website: </span><input name="website" type="text" placeholder="" required></div>
@@ -2147,12 +2146,15 @@
     var targetElement = document.getElementById(elementId);
 
     if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: 'smooth'
-      });
+        var additionalOffset = 20;
+        var targetOffset = targetElement.offsetTop + additionalOffset;
+
+        window.scrollTo({
+            top: targetOffset,
+            behavior: 'smooth'
+        });
     }
-  }
+}
 
 
   function smoothScrollToTop() {
