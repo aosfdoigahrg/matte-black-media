@@ -26,6 +26,14 @@
 
   <link rel="icon" href="https://matte-black-media.com/favicon.ico"
     type="image/x-icon">
+    <script>
+      function scrollToTop() {
+          window.scrollTo(0, 0);
+      }
+
+      
+      window.addEventListener('beforeunload', scrollToTop);
+  </script>
 
   <style>
     :root {
@@ -59,7 +67,7 @@
     .faq-container {
       width: 600px;
       background-color: var(--night);
-      border-radius: 1vw;
+      border-radius: 2vw;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
       flex-direction: column;
       margin-bottom: 20vh;
@@ -956,7 +964,7 @@
     }
 
     .text_left .text {
-      background: var(--ligher-night);
+      background: var(--night);
       padding: 2vw;
       border-radius: 2vw;
       box-shadow: 0 0 50px #0000008f;
@@ -971,7 +979,7 @@
       font-size: 3vw;
       margin: inherit 2vw 3vh 2vw;
       align-self: center;
-      color: var(--ivory);
+      color: var(--amethyst);
       font-weight: 700;
     }
 
@@ -1017,13 +1025,14 @@
     .features .title {
 
 
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       background-color: var(--ligher-night);
+      color: var(--amethyst);
 
       height: 100%;
       border-top-right-radius: 32px;
@@ -1627,7 +1636,7 @@
 
     .fade {
       opacity: 0;
-      transition: 1s all ease-out;
+      transition: 200ms all ease-out;
     }
 
     .arrow-space {
@@ -1820,17 +1829,16 @@
     <div class=" features_container">
     <div class="text_left">
       <div class="text">
-        <div class="text_title">Our process:</div>
+        <div class="text_title">Our process</div>
         <div class="description">At <span class="underline" style="font-weight: bold;">Matte Black Media</span>, we
           handle
-          the entire client acquisition process, so you can focus solely on growing your business and you don't have to
-          worry about anything other than serving your customers. <br> <br>
+          the entire client acquisition process, so you can focus solely on growing your business. <br> <br>
           All clients are <span class="underline" style="font-weight: bold;">pre-booked, nurtured</span> and seamlessly
           integrated into your <span class="underline" style="font-weight: bold;">calendar.</span> <br> <br>
           Rest assured, with us, concerns about having enough clients will be a thing of the past.
         </div>
       </div>
-      <a onclick="smoothScrollToElement('fourthSection')" class="contact_button" href="fourthSection">
+      <a onclick="smoothScrollToElement('fourthSection')" class="contact_button">
         <div>Contact Us</div>
       </a>
     </div>
@@ -1873,7 +1881,7 @@
           scheduled treatment.</p>
       </div>
     </div>
-    <a onclick="smoothScrollToElement('fourthSection')" class="contact_button end_contact_button" href="fourthSection">
+    <a onclick="smoothScrollToElement('fourthSection')" class="contact_button end_contact_button">
       <div>Contact Us</div>
 
     </a>
@@ -1944,15 +1952,14 @@
   <section class="static-section section section4" id="fourthSection">
     <h1>Get <span class="underline" style="text-decoration: underline solid var(--blueviolet);">10 PreBooked
         Appointments</span> in the next 30 days, or you don't pay</h1>
-    <h2>Straight into your calendar. You don't have to take any risks! It's a win-win for both of us.</h2>
-    <h4 style="line-height: 1rem;"><br> Fill the contact form below and we'll schedule a quick 15-minute zoom meeting as fast as
-      we can!</h4>
-    <h4><br>If you don't see us working together, you can just take the ideas and implement them yourself!</h5>
+    <h2>Straight into your calendar. You don't have to take any risks!</h2>
+    <h4 style="line-height: 2rem; font-weight: 400;"><br> Have questions? Fill the contact form below and we'll schedule a quick 15-minute zoom meeting as fast as we can so that we can explain our strategy!</h4>
+    <h4 style=" line-height: 2rem; font-weight: 400;"><br>No obligations! If after the meeting you don't see us working together, you can just take the ideas and implement them yourself.</h5>
       <form name="submit-to-google-sheet">
-        <div><span>Name: </span><input name="name" type="text" placeholder="" required></div>
-        <div><span>Website: </span><input name="website" type="text" placeholder="" required></div>
-        <div><span>Email: </span><input name="email" type="email" placeholder="" required></div>
-        <div><span>Phone: </span><input name="phone" type="tel" placeholder="" required></div>
+        <div><span>Name: </span><input name="name" type="text" placeholder="Your Full Name" required></div>
+        <div><span>Website: </span><input name="website" type="text" placeholder="Of your business" required></div>
+        <div><span>Email: </span><input name="email" type="email" placeholder="Best your personal email" required></div>
+        <div><span>Phone: </span><input name="phone" type="tel" placeholder="Best your personal number" required></div>
         <button type="submit">Double my clients!</button>
       </form>
 
