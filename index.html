@@ -2146,8 +2146,10 @@
     var targetElement = document.getElementById(elementId);
 
     if (targetElement) {
-        var additionalOffset = 20;
-        var targetOffset = targetElement.offsetTop + additionalOffset;
+        var vh = window.innerHeight * 0.01;
+        var additionalOffsetVH = 20;
+        var additionalOffsetPixels = additionalOffsetVH * vh;
+        var targetOffset = targetElement.offsetTop + additionalOffsetPixels;
 
         window.scrollTo({
             top: targetOffset,
